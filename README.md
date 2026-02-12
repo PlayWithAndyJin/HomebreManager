@@ -151,7 +151,7 @@ A: 扩展使用本地系统时间，如需校准请调整系统时间设置
 ### 联系方式
 - 平台反馈中心：[点击前往](https://cs.andyjin.website/feedback)
 - 技术支持邮箱：2358155969@qq.com
-- GitHub Issues
+- Issues
 
 ---
 
