@@ -1,162 +1,183 @@
-# Modern Panel - 现代化浏览器新标签页扩展
+# HBM — Homebrew Manager 🍺
 
-![Modern Panel Logo](./icon32.png)
+<p align="center">
+  <a href="README.en.md">English</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="README.md">中文版</a>
+</p>
 
-Modern Panel 是一款界面美观的 Chrome 浏览器扩展，旨在为您提供全新的新标签页体验。通过现代化的设计语言和丰富的自定义选项，让您的浏览器主页变得更加实用和个性化。了解更多可以前往网页[https://panel.andyjin.website](https://panel.andyjin.website)
+<p align="center">
+  <img src="https://img.shields.io/badge/AI_Generated-8A2BE2?style=flat-square" alt="AI Generated"/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Idea-AndyJin-f59e0b?style=flat-square" alt="Idea: AndyJin"/>
+</p>
 
-![index](./index.png)
+**HBM** 是一款基于 [Wails](https://wails.io) 构建的 Homebrew 可视化管理工具，覆盖 Homebrew 命令行全部核心功能，并提供镜像源管理、一键安装/卸载等增强体验。
 
-## 主要特性
+## 特性
 
-### 视觉体验
-- 动态背景图片：支持 Picsum 随机图片和自定义上传
-- 实时时间日期：精准显示当前时间和日期
-- 流畅动画效果：优雅的过渡动画和交互反馈
-- 深色/浅色主题：自动适配系统主题或手动切换
+| 功能 | 说明 |
+|------|------|
+| 📊 **仪表盘** | 系统概览、包统计、快捷操作（brew doctor / update / cleanup） |
+| 📦 **包管理** | 浏览已安装的 Formulae 和 Casks，过滤、查看详情、卸载、升级 |
+| 🔍 **搜索** | 搜索 Homebrew 全部包，一键安装 |
+| 🔌 **Tap 管理** | 添加/移除 Homebrew Taps |
+| ⚙️ **服务管理** | 启动/停止/重启 brew services |
+| 🛠️ **工具** | brew doctor、update、cleanup、upgrade 全部 |
+| 🪞 **镜像源管理** | 一键切换官方/中科大/清华/阿里云镜像源，检测当前配置状态 |
+| 🚀 **安装向导** | 未检测到 brew 时自动引导一键安装（支持官方/中科大/清华源） |
+| 📟 **实时控制台** | 所有操作实时流式输出 |
 
-### 智能搜索
-- 多搜索引擎支持：Google、Bing、百度、DuckDuckGo 等
-- 自定义搜索引擎：支持添加个性化搜索服务
-- 实时热点搜索：集成热门搜索词推荐
-- 智能搜索建议：根据输入内容提供相关建议
+## 截图
 
-### 书签管理
-- 可视化书签卡片：美观的磁贴式布局展示
-- 拖拽排序：直观的书签整理体验
-- 分组管理：支持创建书签文件夹分类
-- 快速访问：一键打开常用网站
+<table>
+  <tr>
+    <td><img src="Samples/Dashboard.png" alt="仪表盘" width="400"/></td>
+    <td><img src="Samples/Packages.png" alt="包管理" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center">📊 仪表盘</td>
+    <td align="center">📦 包管理</td>
+  </tr>
+  <tr>
+    <td><img src="Samples/Search.png" alt="搜索" width="400"/></td>
+    <td><img src="Samples/Mirrors.png" alt="镜像源" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center">🔍 搜索</td>
+    <td align="center">🪞 镜像源管理</td>
+  </tr>
+  <tr>
+    <td><img src="Samples/Tap.png" alt="Tap管理" width="400"/></td>
+    <td><img src="Samples/Services.png" alt="服务管理" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center">🔌 Tap 管理</td>
+    <td align="center">⚙️ 服务管理</td>
+  </tr>
+  <tr>
+    <td><img src="Samples/Tools.png" alt="工具" width="400"/></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center">🛠️ 工具</td>
+    <td></td>
+  </tr>
+</table>
 
-### 个性化设置
-- 网格布局自定义：灵活调整书签显示列数
-- 消息通知样式：多种弹窗显示方式选择
-- 自动更新检查：智能检测新版本并提醒
-- 数据持久化：所有设置自动保存到本地
 
-## 安装方式
-
-目前支持Google Chrome和Microsoft Edge安装(均需开启开发者模式)，本文以Chrome为例~
-
-### 开发者模式安装（推荐）
-1. 下载并解压扩展包到本地文件夹
-2. 打开 Chrome 浏览器，访问 `chrome://extensions/`
-3. 开启右上角的"开发者模式"
-4. 点击"加载已解压的扩展程序"
-5. 选择解压后的文件夹目录
-
-### 注意事项
-- 确保 Chrome 版本 ≥ 88.0
-- 安装后建议重启浏览器以确保功能正常
-- 如遇问题可在扩展管理页面重新加载扩展
 
 ## 快速开始
 
-### 基础使用
-1. 安装完成后，每次打开新标签页都会显示 Modern Panel
-2. 默认显示时间、日期和搜索框
-3. 点击右下角设置按钮进行个性化配置
-4. 通过拖拽方式添加和管理书签
+### 前置要求
 
-### 常用操作
-- 添加书签：点击"+"按钮或右键菜单
-- 编辑书签：点击书签卡片上的编辑图标
-- 删除书签：点击书签卡片上的删除图标
-- 搜索网站：在搜索框中输入关键词
-- 切换背景：在设置中选择图片源或上传自定义图片
+- macOS (Apple Silicon / Intel) 或 Linux
+- Go 1.23+
+- Node.js 18+
 
-## 技术架构
+### 开发模式
 
-### 核心组件
-- Manifest V3：遵循最新的 Chrome 扩展规范
-- 模块化设计：各功能模块独立开发维护
-- 响应式布局：适配不同屏幕尺寸
-- 性能优化：轻量级代码，快速加载
+```bash
+# 克隆项目
+git clone <repo-url> && cd BrewManager
 
-### 主要技术栈
-- 前端框架：原生 JavaScript + HTML5 + CSS3
-- 状态管理：localStorage 持久化存储
-- 网络请求：Fetch API 异步数据获取
-- 图像处理：Canvas API favicon 获取
-- 动画效果：CSS3 Transitions & Animations
+# 开发运行（自动热重载）
+wails dev
+```
 
-### 安全特性
-- 内容安全策略：严格的 CSP 配置
-- 权限最小化：仅申请必要权限
-- 数据隐私：所有数据本地存储，不上传服务器
-- HTTPS 支持：网络请求强制使用安全协议
+### 生产构建
 
-## 响应式适配
+```bash
+# 构建为 .app 应用
+wails build
 
-Modern Panel 完美适配各种设备：
+# 运行
+open build/bin/HBM.app
+```
 
-### 桌面端（≥1024px）
-- 完整功能展示
-- 多列网格布局
-- 丰富的交互效果
+## 项目结构
 
-### 平板端（768px-1023px）
-- 自适应列数调整
-- 触摸友好的交互设计
-- 优化的字体大小
+```
+BrewManager/
+├── main.go                 # Wails 应用入口
+├── app.go                  # Go ↔ JS 绑定层
+├── wails.json              # Wails 构建配置
+├── backend/
+│   ├── models/types.go     # 共享数据类型
+│   └── brew/
+│       ├── executor.go     # brew 命令执行器（缓存 + 流式输出）
+│       ├── packages.go     # 包管理（list/search/info/install/uninstall/upgrade）
+│       ├── taps.go         # Tap 管理
+│       ├── services.go     # 服务管理
+│       ├── system.go       # 系统工具（doctor/cleanup/update/stats/install/uninstall）
+│       └── mirrors.go      # 镜像源管理
+└── frontend/
+    └── src/
+        ├── main.ts         # Vue 入口
+        ├── App.vue         # 主布局
+        ├── style.css       # 全局样式（暗色主题）
+        ├── router/         # 路由配置
+        ├── stores/         # Pinia 状态管理
+        ├── types/          # TypeScript 类型
+        ├── components/     # 通用组件
+        │   ├── Sidebar.vue
+        │   ├── Console.vue
+        │   ├── StatsCard.vue
+        │   ├── PackageDetail.vue
+        │   └── ConfirmDialog.vue
+        └── views/          # 页面
+            ├── Dashboard.vue
+            ├── Packages.vue
+            ├── Search.vue
+            ├── Taps.vue
+            ├── Services.vue
+            ├── Tools.vue
+            └── Mirrors.vue
+```
 
-### 移动端（≤767px）
-- 单列布局优化
-- 简化的操作流程
-- 流畅的手势支持
+## 技术栈
 
-## 故障排除
+| 层 | 技术 |
+|----|------|
+| **桌面框架** | [Wails v2](https://wails.io) |
+| **后端** | Go 1.23 |
+| **前端** | Vue 3 + TypeScript |
+| **构建** | Vite |
+| **状态管理** | Pinia |
+| **路由** | Vue Router 4 |
+| **图标** | FontAwesome 7 (Free) |
+| **样式** | CSS Variables (暗色主题) |
 
-### 常见问题
+## 镜像源支持
 
-Q: 扩展无法正常加载
-A: 检查 Chrome 版本是否 ≥ 88.0，确认扩展权限设置正确
+HBM 支持一键切换以下镜像源，解决国内 Homebrew 下载慢的问题：
 
-Q: 背景图片不显示
-A: 检查网络连接，确认图片源设置正确，尝试刷新页面
+| 镜像源 | Brew 本体 | API 源 | Bottles |
+|--------|-----------|--------|---------|
+| 官方 (GitHub) | `github.com/Homebrew/brew.git` | `formulae.brew.sh` | GitHub |
+| 中科大 USTC | `mirrors.ustc.edu.cn/brew.git` | `mirrors.ustc.edu.cn/.../api` | `mirrors.ustc.edu.cn/.../bottles` |
+| 清华 TUNA | `mirrors.tuna.tsinghua.edu.cn/.../brew.git` | `mirrors.tuna.tsinghua.edu.cn/.../api` | `mirrors.tuna.tsinghua.edu.cn/.../bottles` |
+| 阿里云 | `mirrors.aliyun.com/homebrew/brew.git` | `mirrors.aliyun.com/.../api` | `mirrors.aliyun.com/.../bottles` |
 
-Q: 书签无法保存
-A: 检查 localStorage 存储空间，清理浏览器缓存后重试
+## 构建说明
 
-Q: 搜索功能异常
-A: 确认网络连接正常，检查搜索引擎配置是否正确
+```bash
+# 安装 Wails CLI
+go install github.com/wailsapp/wails/v2/cmd/wails@latest
 
-Q: 时间显示不准确
-A: 扩展使用本地系统时间，如需校准请调整系统时间设置
+# 开发模式（热重载）
+wails dev
 
-### 调试方法
-1. 打开 Chrome 开发者工具（F12）
-2. 查看 Console 面板的错误信息
-3. 检查 Network 面板的请求状态
-4. 验证 Application 面板的存储数据
+# 生产构建
+wails build
 
-## 版本更新
+# 仅构建前端（快速调试）
+cd frontend && npm run build
+```
 
-### 更新日志
-查看详细的版本更新历史，请访问我们的[更新日志页面](https://gitcode.com/csdnjxx/ModernPanel/releases)
+## 注意事项
 
-### 自动更新
-- 扩展支持自动检查更新功能
-- 可在设置中配置检查频率
-- 发现新版本时会及时提醒
+- **Homebrew 5.0+**: Core/Cask 已内置为 JSON API，无需独立配置镜像
+- **Dock 图标**: 首次打开 Finder 图标可能需刷新（`killall Finder`）
+- **环境变量**: 镜像源的 API 和 Bottles 配置需写入 `~/.zshrc` 持久化
 
-### 手动更新
-1. 下载最新版本的扩展包
-2. 解压到原文件夹（覆盖旧文件）
-3. 在 Chrome 扩展管理页面点击"重新加载"
-4. 或卸载后重新安装新版本
+## License
 
-## 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
-## 支持与反馈
-
-### 联系方式
-- 平台反馈中心：[点击前往](https://cs.andyjin.website/feedback)
-- 技术支持邮箱：2358155969@qq.com
-- Issues
-
----
-
-Modern Panel - 让每一次新标签页都成为美好的开始
-
-[返回顶部](#modern-panel---现代化浏览器新标签页扩展)
+MIT
